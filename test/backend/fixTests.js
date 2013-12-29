@@ -11,16 +11,14 @@ var mongoose = require('mongoose'),
 describe('Fix Tests', function(){
  
  before(function(done){
- 	console.log('hello im here, hello im here');
-
+ 	
 	Fix.remove({}, function(err) { 
-	   console.log('collection removed');
 	   done();
 	});
     
  });
                    
- it ('test one', function(done){
+ it ('should create new fix', function(done){
    var fix = { title : 'the title', desc : 'desc 2.0' };
    
    request.post('localhost:9000/api/createFix')
